@@ -10,7 +10,7 @@ class BoardSerializers(serializers.ModelSerializer):
 class CommentSerializers(serializers.ModelSerializer):
     class Meta:
         model = Comment
-        fields = ['content']
+        fields = '__all__'
 
 class BoardDetailSerializers(serializers.ModelSerializer):
     comments = CommentSerializers(many = True)
